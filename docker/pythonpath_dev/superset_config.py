@@ -22,7 +22,10 @@
 #
 import logging
 import os
+from datetime import timedelta
+from typing import Optional
 
+from cachelib.file import FileSystemCache
 from celery.schedules import crontab
 from flask_caching.backends.filesystemcache import FileSystemCache
 
@@ -92,7 +95,27 @@ class CeleryConfig:
 
 CELERY_CONFIG = CeleryConfig
 
-FEATURE_FLAGS = {"ALERT_REPORTS": True}
+FEATURE_FLAGS = {"ALERT_REPORTS": True, "EMBEDDED_SUPERSET": True, "DASHBOARD_NATIVE_FILTERS": True, "DASHBOARD_CROSS_FILTERS": True, "ALLOW_ADHOC_SUBQUERY":True }
+ENABLE_API=True
+SESSION_COOKIE_SAMESITE = "None"
+ENABLE_PROXY_FIX = True
+PUBLIC_ROLE_LIKE_GAMMA = True 
+ALLOW_ADHOC_SUBQUERY = True
+
+
+# CORS Settings
+ENABLE_CORS = True
+CORS_OPTIONS = {
+  'supports_credentials': True,
+  'allow_headers': ['*'],
+  'resources':['*'],
+  'origins': ['*', '*']
+}
+HTTP_HEADERS = {}
+# A CSRF token that expires in 1 year
+WTF_CSRF_TIME_LIMIT = 60 * 60 * 24 * 365
+WTF_CSRF_ENABLED = False
+
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"
 # The base URL for the email report hyperlinks.

@@ -74,7 +74,7 @@ export const ALL_FILTERS_ROOT = 'ALL_FILTERS_ROOT';
 
 export enum DashboardStandaloneMode {
   NONE = 0,
-  HIDE_NAV = 1,
+  HIDE_NAV = 2,
   HIDE_NAV_AND_TITLE = 2,
   REPORT = 3,
 }

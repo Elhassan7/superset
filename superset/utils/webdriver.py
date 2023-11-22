@@ -57,7 +57,7 @@ if feature_flag_manager.is_feature_enabled("PLAYWRIGHT_REPORTS_AND_THUMBNAILS"):
 
 
 class DashboardStandaloneMode(Enum):
-    HIDE_NAV = 1
+    HIDE_NAV = 2
     HIDE_NAV_AND_TITLE = 2
     REPORT = 3
 

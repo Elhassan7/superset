@@ -28,6 +28,7 @@ const MenuItem = styled(AntdMenu.Item)`
   }
 
   &.ant-menu-item {
+    display: 'none';
     height: ${({ theme }) => theme.gridUnit * 8}px;
     line-height: ${({ theme }) => theme.gridUnit * 8}px;
     a {
@@ -57,6 +58,7 @@ const MenuItem = styled(AntdMenu.Item)`
 
   &.ant-menu-item,
   &.ant-dropdown-menu-item {
+    display: 'none';
     span[role='button'] {
       display: inline-block;
       width: 100%;
@@ -68,6 +70,7 @@ const MenuItem = styled(AntdMenu.Item)`
 const StyledNav = styled(AntdMenu)`
   line-height: 51px;
   border: none;
+  display: 'none';
 
   & > .ant-menu-item,
   & > .ant-menu-submenu {
@@ -97,6 +100,7 @@ const StyledNav = styled(AntdMenu)`
 const StyledSubMenu = styled(AntdMenu.SubMenu)`
   color: ${({ theme }) => theme.colors.grayscale.dark1};
   border-bottom: none;
+  display: 'none';
   .ant-menu-submenu-open,
   .ant-menu-submenu-active {
     background-color: ${({ theme }) => theme.colors.primary.light5};
