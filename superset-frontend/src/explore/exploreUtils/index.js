@@ -172,7 +172,7 @@ export function getExploreUrl({
     search.csv = 'true';
   }
   if (endpointType === URL_PARAMS.standalone.name) {
-    search.standalone = '1';
+    search.standalone = '2';
   }
   if (endpointType === 'query') {
     search.query = 'true';

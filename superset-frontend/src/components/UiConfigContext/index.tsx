@@ -31,10 +31,10 @@ interface EmbeddedUiConfigProviderProps {
 }
 
 export const UiConfigContext = createContext<UiConfigType>({
-  hideTitle: false,
-  hideTab: false,
-  hideNav: false,
-  hideChartControls: false,
+  hideTitle: true,
+  hideTab: true,
+  hideNav: true,
+  hideChartControls: true,
 });
 
 export const useUiConfig = () => useContext(UiConfigContext);
